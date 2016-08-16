@@ -1,5 +1,6 @@
 package br.com.thesource.pizzaap;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,18 +13,19 @@ import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private @BindView(R.id.etUsuario) EditText etUsuario;
-    private @BindView(R.id.etPsw) EditText etPsw;
+    private EditText etUsuario;
+    private EditText etPsw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+        EditText etUsuario =(EditText) findViewById(R.id.etUsuario);
+        EditText etPsw =(EditText) findViewById(R.id.etPsw);
     }
 
-    @OnClick(R.id.btnLogin)
     public void logar(Button button) {
-        Toast.makeText(this,"OLA " + etUsuario.getText(),Toast.LENGTH_SHORT);
+        Intent i = new Intent(this,OrderActivity.class);
+        startActivity(i);
     }
 }
