@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pizzaap</string>
+    <string name="login_usr">Usuário</string>
+    <string name="login_usr_hint">Informe o Usuário</string>
+    <string name="login_psw">Senha</string>
+    <string name="login_psw_hint">Informe a Senha</string>
+    <string name="login_bt">Logar</string>
+</resources>
